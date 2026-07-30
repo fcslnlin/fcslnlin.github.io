@@ -6,7 +6,7 @@
   <title>Francis Lin — Content Strategy & Production</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,8 +19,9 @@
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
     </button>
   </nav>
 
@@ -33,198 +34,267 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="hero-content">
+    <div class="hero-text">
       <p class="hero-eyebrow">Content Strategy & Production</p>
-      <h1 class="hero-name">Francis<br><em>Lin</em></h1>
-      <p class="hero-tagline">Turning brand stories into content that performs — from editorial calendars to camera-ready production.</p>
+      <h1 class="hero-name">FRANCIS<br>LIN</h1>
+      <p class="hero-tagline">Marketer who produces the work.<br>From editorial calendar to camera-ready.</p>
       <div class="hero-cta">
         <a href="#work" class="btn-primary">View Work</a>
-        <a href="#contact" class="btn-secondary">Get in Touch</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
       </div>
     </div>
-    <div class="hero-roles">
-      <span>Content Strategy</span>
-      <span class="divider">·</span>
-      <span>Social Media</span>
-      <span class="divider">·</span>
-      <span>Content Marketing</span>
-      <span class="divider">·</span>
-      <span>Video Production</span>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
+  <!-- HERO IMAGE — bleeds in on scroll -->
+  <div class="hero-image-wrap">
+    <div class="hero-image-inner" id="heroParallax">
+      <img src="assets/hero.jpg" alt="BMW M5 cinematic campaign shot — contest winning image" />
+      <div class="hero-image-caption">BMW M5 · OpenRoad Auto Group · 1st Place, BMW Canada Dealer Video Competition</div>
+    </div>
+  </div>
+
   <!-- WORK -->
-  <section id="work" class="section work-section">
-    <div class="section-header">
-      <span class="section-label">Selected Work</span>
-      <h2>Content that moves<br><em>the needle</em></h2>
+  <section id="work" class="work-section">
+
+    <div class="section-intro reveal">
+      <span class="label">Selected Work</span>
+      <h2 class="section-heading">Content that<br><em>moves the needle</em></h2>
     </div>
 
     <!-- CASE STUDY 1: OPENROAD -->
-    <div class="case-study featured">
-      <div class="case-study-meta">
-        <span class="case-tag">Case Study</span>
-        <span class="case-tag">2022 – 2024</span>
-        <span class="case-tag">In-House Role</span>
+    <div class="case-study reveal" id="cs-openroad">
+      <div class="case-study-header">
+        <div class="case-study-meta">
+          <span class="label">Case Study · 2022–2024 · In-House Role</span>
+        </div>
+        <div class="case-study-title-row">
+          <h3>OpenRoad<br>Auto Group</h3>
+          <p class="case-study-sub">Multi-Brand Content Strategy<br>Vancouver, BC</p>
+        </div>
       </div>
-      <div class="case-study-body">
-        <div class="case-study-text">
-          <h3>OpenRoad Auto Group</h3>
-          <p class="case-subtitle">Multi-Brand Content Strategy · Vancouver, BC</p>
-          <p class="case-desc">Served as the sole in-house content creator for one of Canada's largest premium auto dealer groups — owning the full content pipeline from ideation to publication across eight dealership brands simultaneously. Attended monthly strategy meetings with each individual store, aligning content with each brand's campaign goals while maintaining a consistent publishing cadence across all channels.</p>
-          <ul class="case-highlights">
-            <li>Managed editorial calendars and multi-channel content across <strong>8 premium brands</strong> simultaneously — BMW, MINI, Rolls-Royce, Lexus, Acura, Honda, and Toyota</li>
-            <li>Produced assets deployed across <strong>social media, digital advertising, print, and in-store</strong> placements</li>
-            <li>Supported Google <strong>Performance Max (PMAX)</strong> campaigns with optimized visual content, directly feeding paid advertising pipelines</li>
-            <li>Won <strong>1st and 3rd place nationally</strong> in the BMW Canada Dealer Video Competition</li>
-            <li>Directed a <strong>cinematic launch film</strong> for the Porsche Macan EV, shot on location at a helicopter base</li>
-            <li>Shot a <strong>BMW track day at Area 27</strong> motorsport circuit — dynamic, high-speed automotive content</li>
-            <li>Managed on-site production independently, directing talent and coordinating with a different team at each dealership location</li>
-          </ul>
-          <div class="case-brands">
-            <span>BMW</span>
-            <span>MINI</span>
-            <span>Rolls-Royce</span>
-            <span>Lexus</span>
-            <span>Acura</span>
-            <span>Honda</span>
-            <span>Toyota</span>
-            <span>Porsche</span>
+
+      <!-- FEATURE IMAGE -->
+      <div class="case-feature-image">
+        <img src="assets/hero.jpg" alt="BMW M5 chandelier campaign — 1st place BMW Canada" />
+        <div class="case-feature-label">Award-winning BMW M5 campaign — 1st place nationally</div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-desc">
+          <p>Sole in-house content creator for one of Canada's largest premium dealer groups — owning the full pipeline from creative strategy through post-production and platform distribution across eight brands simultaneously. Attended monthly strategy meetings with each store, aligned content to active campaigns, and maintained brand compliance across six manufacturer guidelines at once.</p>
+          <p>Produced 680–800+ publish-ready assets over tenure. Content ran across social media, Google Performance Max campaigns, websites, monthly email campaigns, printed collateral, digital billboards, and in-store displays for both sales and service departments.</p>
+        </div>
+        <ul class="case-highlights">
+          <li><strong>8 brands</strong> managed simultaneously — BMW, MINI, Rolls-Royce, Porsche, Lexus, Acura, Honda, Toyota</li>
+          <li><strong>680–800+ assets</strong> produced over tenure across digital, print, and in-store channels</li>
+          <li><strong>Google PMAX</strong> campaign content — visual assets optimized for paid performance advertising</li>
+          <li><strong>1st & 3rd place nationally</strong> — BMW Canada Dealer Video Competition 2025. All three national podium spots claimed by OpenRoad stores.</li>
+          <li><strong>Porsche Macan EV launch</strong> — cinematic campaign shot at a helicopter base</li>
+          <li><strong>BMW track day at Area 27</strong> — dynamic on-track content at motorsport circuit</li>
+          <li>Monthly performance reports presented to General Managers, Service Managers, and Sales Managers across all stores</li>
+        </ul>
+        <div class="case-brands">
+          <span>BMW</span><span>MINI</span><span>Rolls-Royce</span><span>Porsche</span>
+          <span>Lexus</span><span>Acura</span><span>Honda</span><span>Toyota</span>
+        </div>
+      </div>
+
+      <!-- IMAGE GRID -->
+      <div class="case-grid">
+        <div class="case-grid-item large">
+          <img src="assets/openroad-1.jpg" alt="BMW M5 bridge roller — Vancouver skyline" class="grid-img" />
+        </div>
+        <div class="case-grid-item">
+          <img src="assets/openroad-2.jpg" alt="BMW M4 on track at Area 27" class="grid-img" />
+        </div>
+        <div class="case-grid-item">
+          <img src="assets/openroad-3.jpg" alt="BMW XM teal motion roller" class="grid-img" />
+        </div>
+        <div class="case-grid-item">
+          <img src="assets/openroad-4.jpg" alt="BMW M8 green — red-lit showroom" class="grid-img" />
+        </div>
+        <div class="case-grid-item">
+          <img src="assets/openroad-5.jpg" alt="BMW M lifestyle merch flatlay" class="grid-img" />
+        </div>
+        <div class="case-grid-item">
+          <img src="assets/openroad-6.jpg" alt="BMW M5 interior cockpit — Rogers Arena" class="grid-img" />
+        </div>
+      </div>
+
+      <!-- VIDEO PLACEHOLDER -->
+      <div class="video-embed-placeholder">
+        <div class="video-placeholder-inner">
+          <span class="play-icon">▶</span>
+          <p>BMW Canada Competition Entry — 1st Place</p>
+          <p class="placeholder-hint">Add YouTube/Vimeo embed when available</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CASE STUDY 2: DEFIANT ONE -->
+    <div class="case-study reveal" id="cs-defiant">
+      <div class="case-study-header">
+        <div class="case-study-meta">
+          <span class="label">Corporate & Commercial · 2021–Present</span>
+        </div>
+        <div class="case-study-title-row">
+          <h3>Defiant One<br>Media</h3>
+          <p class="case-study-sub">Camera Operator<br>Vancouver & Victoria, BC</p>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-desc">
+          <p>Camera operator across a range of corporate and institutional productions — covering clients from international healthcare to Canada's top business schools to skilled trades. Projects spanned intimate interview formats, large-scale conference coverage, and on-location industrial shoots.</p>
+        </div>
+        <ul class="case-highlights">
+          <li><strong>Patient's Voice 2025</strong> — 3rd International Conference on patient involvement in health education. International audience across medicine, nursing, social work, and allied health. A conference held once every decade. Shot recap and long-form interview content.</li>
+          <li><strong>UBC Sauder Spark</strong> — Recurring camera operator for the UBC Sauder School of Business recap series. <strong>Called back 4 consecutive years</strong> — direct evidence of consistent delivery and on-set professionalism.</li>
+          <li><strong>Honour House Society — Tour of Honour</strong> — Civic event in Victoria, BC. Local mayor, firefighters, and community leaders. Nonprofit awareness campaign.</li>
+          <li><strong>Operator Training School, Langley</strong> — On-location industrial shoot covering heavy equipment operations including excavators and transport vehicles.</li>
+        </ul>
+      </div>
+
+      <div class="video-embed-placeholder">
+        <div class="video-placeholder-inner">
+          <span class="play-icon">▶</span>
+          <p>UBC Sauder Spark — Recap Series</p>
+          <p class="placeholder-hint">Add video embed when available</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADDITIONAL WORK GRID -->
+    <div class="additional-work reveal">
+      <span class="label">Additional Work</span>
+      <div class="work-cards">
+
+        <div class="work-card">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #1a1a18, #2a2520);">
+            <span class="work-card-img-label">Event</span>
+          </div>
+          <div class="work-card-body">
+            <span class="work-card-tag">Event Coverage</span>
+            <h4>University Events</h4>
+            <p>TheCalendar.ca media team — UBC Polar Bear Run (2018 & 2019) and the 2019 campus-wide Snowball Fight, an event that drew local news coverage. Fast-turnaround documentary-style content.</p>
           </div>
         </div>
-        <div class="case-study-media">
-          <div class="video-placeholder">
-            <p>📹 OpenRoad video embeds</p>
-            <p class="placeholder-hint">Replace with YouTube/Vimeo iframes<br>e.g. Porsche Macan EV launch film</p>
+
+        <div class="work-card">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #141418, #1a1a22);">
+            <span class="work-card-img-label">Roblox</span>
+          </div>
+          <div class="work-card-body">
+            <span class="work-card-tag">Digital / Gaming</span>
+            <h4>Roblox — Icebreaker Trailer</h4>
+            <p>Produced a game trailer for Roblox title Icebreaker that reached <strong>800K+ views</strong>, receiving recognition from Roblox's official channels. Audience-native content that performs at scale.</p>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- CASE STUDY 2: DEFIANT ONE MEDIA -->
-    <div class="case-study">
-      <div class="case-study-meta">
-        <span class="case-tag">Corporate & Commercial</span>
-        <span class="case-tag">2021 – Present</span>
-        <span class="case-tag">Defiant One Media</span>
-      </div>
-      <div class="case-study-body">
-        <div class="case-study-text">
-          <h3>Corporate & Institutional Video</h3>
-          <p class="case-subtitle">Camera Operator · Defiant One Media · Vancouver & Victoria, BC</p>
-          <p class="case-desc">Worked as camera operator across a range of corporate and institutional productions for Defiant One Media — covering clients from healthcare to education to skilled trades. Projects spanned intimate interview formats, large-scale conference coverage, and on-location industrial shoots.</p>
-          <ul class="case-highlights">
-            <li><strong>Patient's Voice 2025</strong> — Shot recap and long-form interview content for the 3rd International Conference on patient involvement in health education. International audience spanning medicine, nursing, social work, and allied health professions across multiple countries. A conference held once every decade.</li>
-            <li><strong>UBC Sauder Spark</strong> — Recurring camera operator for the UBC Sauder School of Business recap series. <strong>Called back for 4 consecutive years</strong> — a direct reflection of consistent delivery and on-set professionalism.</li>
-            <li><strong>Honour House Society — Tour of Honour</strong> — Covered a civic event in Victoria, BC bringing together the local mayor, firefighters, and community leaders for a nonprofit awareness campaign.</li>
-            <li><strong>Operator Training School, Langley</strong> — On-location industrial shoot covering heavy equipment operations including excavators and transport vehicles.</li>
-          </ul>
-        </div>
-        <div class="case-study-media">
-          <div class="video-placeholder">
-            <p>📹 Defiant One Media video embeds</p>
-            <p class="placeholder-hint">Add links when available —<br>UBC Sauder Spark or Patient's Voice 2025</p>
+        <div class="work-card">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #181614, #221e18);">
+            <span class="work-card-img-label">Portrait</span>
+          </div>
+          <div class="work-card-body">
+            <span class="work-card-tag">Portraiture</span>
+            <h4>Portrait Photography</h4>
+            <p>Individual and professional portrait sessions. Clean, directed portraiture suited for personal branding, headshots, and social profiles.</p>
           </div>
         </div>
+
       </div>
     </div>
 
-    <!-- WORK GRID -->
-    <div class="work-grid-label">
-      <span class="section-label">Additional Work</span>
-    </div>
-    <div class="work-grid">
-
-      <div class="work-card">
-        <div class="work-card-img event-bg"></div>
-        <div class="work-card-body">
-          <span class="work-card-tag">Event Coverage</span>
-          <h4>University Events — TheCalendar.ca</h4>
-          <p>Shot large-scale UBC campus events including the annual Polar Bear Run (2018 & 2019) and the 2019 campus-wide Snowball Fight — an event that drew local news coverage. Fast-turnaround documentary-style content for a student media outlet.</p>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-card-img automotive-bg"></div>
-        <div class="work-card-body">
-          <span class="work-card-tag">Automotive</span>
-          <h4>Automotive Photography</h4>
-          <p>Location and studio photography for premium vehicle brands — product imagery built for digital campaigns, social media, and print. Includes luxury and performance vehicles across the OpenRoad portfolio.</p>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-card-img portrait-bg"></div>
-        <div class="work-card-body">
-          <span class="work-card-tag">Portraiture</span>
-          <h4>Portrait Photography</h4>
-          <p>Individual and professional portrait sessions for a range of clients. Clean, directed portraiture suited for personal branding, headshots, and social profiles.</p>
-        </div>
-      </div>
-
-    </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section about-section">
-    <div class="about-grid">
+  <section id="about" class="about-section">
+    <div class="about-grid reveal">
       <div class="about-image-wrap">
         <div class="about-photo-placeholder">
-          <span>Photo</span>
-          <p>Upload your photo as<br><code>assets/francis.jpg</code><br>then uncomment the img tag below</p>
+          <span>FL</span>
+          <p>Add your photo as<br><code>assets/francis.jpg</code></p>
         </div>
-        <!-- UNCOMMENT once photo is uploaded:
+        <!-- Uncomment when photo is ready:
         <img src="assets/francis.jpg" alt="Francis Lin" class="about-photo" />
         -->
       </div>
       <div class="about-text">
-        <span class="section-label">About</span>
-        <h2>Strategy first.<br><em>Camera second.</em></h2>
-        <p>I'm a content strategist and producer based in Los Angeles with a background spanning premium automotive, corporate, healthcare, and institutional brands. For two years I was the in-house content creator at OpenRoad Auto Group in Vancouver — one of Canada's largest premium dealer groups — where I ran content strategy and production across eight brands at once.</p>
-        <p>What I bring that most content marketers don't: I can handle the full pipeline myself. Brief, shoot, edit, publish. That means faster turnaround, fewer handoffs, and assets that stay on-brand from concept to post — whether they're feeding a Google PMAX campaign, going up on social, or ending up in a print run.</p>
-        <p>Outside of OpenRoad I've worked on corporate productions with Defiant One Media, covering everything from international healthcare conferences to business school recap series — with UBC Sauder bringing me back four years running.</p>
+        <span class="label">About</span>
+        <h2 class="about-heading">Strategy first.<br><em>Camera second.</em></h2>
+        <p>I'm a content strategist and producer based in Los Angeles with 8+ years of visual production experience across premium automotive, corporate, healthcare, and institutional brands.</p>
+        <p>For two years I was the sole in-house content creator at OpenRoad Auto Group in Vancouver — one of Canada's largest premium dealer groups — running content strategy and production across eight brands simultaneously. I didn't just shoot. I ran editorial calendars, aligned with stakeholders, optimized for Google PMAX, and reported monthly to general managers across the territory.</p>
+        <p>What I bring that most content marketers don't: I can handle the full pipeline myself. Brief, shoot, edit, publish. Faster turnaround, fewer handoffs, assets that stay on-brand from concept to post — whether they're feeding a paid advertising pipeline, going up on social, or ending up in a print run.</p>
         <p>Currently open to full-time roles in content strategy, social media management, and content marketing.</p>
-        <div class="about-achievements">
-          <div class="achievement">
-            <span class="achievement-number">8</span>
-            <span class="achievement-label">Premium brands managed simultaneously at OpenRoad</span>
+
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">8</span>
+            <span class="stat-label">Premium brands managed simultaneously</span>
           </div>
-          <div class="achievement">
-            <span class="achievement-number">🏆</span>
-            <span class="achievement-label">BMW Canada Dealer Video Competition — 1st & 3rd place nationally</span>
+          <div class="stat">
+            <span class="stat-num">800+</span>
+            <span class="stat-label">Publish-ready assets produced at OpenRoad</span>
           </div>
-          <div class="achievement">
-            <span class="achievement-number">4×</span>
-            <span class="achievement-label">Repeat camera operator — UBC Sauder Spark series</span>
+          <div class="stat">
+            <span class="stat-num">4×</span>
+            <span class="stat-label">Repeat camera operator — UBC Sauder Spark</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">🏆</span>
+            <span class="stat-label">BMW Canada Dealer Video Competition — 1st & 3rd nationally</span>
           </div>
         </div>
+
+        <div class="about-skills">
+          <div class="skill-group">
+            <span class="skill-label">Strategy</span>
+            <span>Content strategy · Editorial calendars · Social media management · PMAX & paid social · Performance reporting · Brand compliance</span>
+          </div>
+          <div class="skill-group">
+            <span class="skill-label">Production</span>
+            <span>Raw photo & video capture · Color grading · Shoot direction · Storyboarding · Drone operation · Digital billboard formatting</span>
+          </div>
+          <div class="skill-group">
+            <span class="skill-label">Tools</span>
+            <span>Premiere Pro · Lightroom · Photoshop · DaVinci Resolve · Canva · Meta Business Suite · Sprout Social · Monday.com</span>
+          </div>
+          <div class="skill-group">
+            <span class="skill-label">Languages</span>
+            <span>English (native) · Mandarin (fluent)</span>
+          </div>
+        </div>
+
         <div class="about-links">
-          <a href="https://www.linkedin.com/in/flin01/" target="_blank" class="btn-primary">LinkedIn</a>
-          <a href="https://www.instagram.com/franxis.lin" target="_blank" class="btn-secondary">Instagram</a>
+          <a href="https://www.linkedin.com/in/flin01/" target="_blank" class="btn-primary">LinkedIn ↗</a>
+          <a href="https://www.instagram.com/franxis.lin" target="_blank" class="btn-ghost">Instagram ↗</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section contact-section">
-    <div class="contact-inner">
-      <span class="section-label">Contact</span>
-      <h2>Let's work<br><em>together</em></h2>
-      <p class="contact-desc">Currently open to full-time opportunities in content strategy, social media management, and content marketing. Based in Los Angeles, CA — open to remote.</p>
-      <div class="contact-links">
-        <a href="mailto:your@email.com" class="contact-email">your@email.com</a>
-        <div class="contact-socials">
-          <a href="https://www.linkedin.com/in/flin01/" target="_blank">LinkedIn ↗</a>
-          <a href="https://www.instagram.com/franxis.lin" target="_blank">Instagram ↗</a>
-        </div>
+  <section id="contact" class="contact-section">
+    <div class="contact-inner reveal">
+      <span class="label">Contact</span>
+      <h2 class="contact-heading">LET'S WORK<br>TOGETHER</h2>
+      <p class="contact-desc">Open to full-time opportunities in content strategy, social media management, and content marketing. Based in Los Angeles, CA — open to remote.</p>
+      <a href="mailto:hello@francislin.com" class="contact-email">hello@francislin.com</a>
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/flin01/" target="_blank">LinkedIn ↗</a>
+        <a href="https://www.instagram.com/franxis.lin" target="_blank">Instagram ↗</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <span>© 2025 Francis Lin</span>
+    <span>© 2026 Francis Lin</span>
     <span>Los Angeles, CA</span>
   </footer>
 
