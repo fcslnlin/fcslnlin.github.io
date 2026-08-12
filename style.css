@@ -1436,3 +1436,11 @@ body {
   }
   .defiant-next { border-top: 1px solid var(--chrome-2); border-bottom: none; }
 }
+
+/* ============ GRID ITEM HEIGHT FIX ============ */
+.case-grid-item {
+  min-height: 220px;
+}
+.case-grid-item.large {
+  min-height: 320px;
+}
