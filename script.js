@@ -147,8 +147,10 @@ function initSlideshows() {
     const slides = slideshow.querySelectorAll('.slide');
     const prev = slideshow.querySelector('.slide-prev');
     const next = slideshow.querySelector('.slide-next');
+    const audioToggle = slideshow.querySelector('.audio-toggle');
     if (!slides.length) return;
     let current = 0;
+    let muted = true;
     const go = (n) => {
       const oldSlide = slides[current];
       if (oldSlide.tagName === 'VIDEO') oldSlide.pause();
@@ -156,10 +158,22 @@ function initSlideshows() {
       current = (n + slides.length) % slides.length;
       const newSlide = slides[current];
       newSlide.classList.add('active');
-      if (newSlide.tagName === 'VIDEO') newSlide.play().catch(() => {});
+      if (newSlide.tagName === 'VIDEO') {
+        newSlide.muted = muted;
+        newSlide.play().catch(() => {});
+      }
     };
     if (prev) prev.addEventListener('click', (e) => { e.stopPropagation(); go(current - 1); });
     if (next) next.addEventListener('click', (e) => { e.stopPropagation(); go(current + 1); });
+    if (audioToggle) {
+      audioToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        muted = !muted;
+        const activeSlide = slides[current];
+        if (activeSlide.tagName === 'VIDEO') activeSlide.muted = muted;
+        audioToggle.textContent = muted ? '🔇' : '🔊';
+      });
+    }
   });
 }
 
