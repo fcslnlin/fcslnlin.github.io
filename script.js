@@ -150,9 +150,13 @@ function initSlideshows() {
     if (!slides.length) return;
     let current = 0;
     const go = (n) => {
-      slides[current].classList.remove('active');
+      const oldSlide = slides[current];
+      if (oldSlide.tagName === 'VIDEO') oldSlide.pause();
+      oldSlide.classList.remove('active');
       current = (n + slides.length) % slides.length;
-      slides[current].classList.add('active');
+      const newSlide = slides[current];
+      newSlide.classList.add('active');
+      if (newSlide.tagName === 'VIDEO') newSlide.play().catch(() => {});
     };
     if (prev) prev.addEventListener('click', (e) => { e.stopPropagation(); go(current - 1); });
     if (next) next.addEventListener('click', (e) => { e.stopPropagation(); go(current + 1); });
