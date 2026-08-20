@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page Not Found — Francis Lin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    background-color: #FAF8F5;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'104'%3E%3Cpath%20d%3D'M30%2068L0%2050V16L30%200l30%2016v34L30%2068zm0-2.6L57.4%2049.3V17.7L30%202.6%202.6%2017.7v31.6L30%2065.4z'%20fill%3D'%23000'%20fill-opacity%3D'0.04'%2F%3E%3Cpath%20d%3D'M30%20104L0%2086V52l30-16%2030%2016v34L30%20104zm0-2.6L57.4%2085.3V53.7L30%2038.6%202.6%2053.7v31.6L30%20101.4z'%20fill%3D'%23000'%20fill-opacity%3D'0.04'%2F%3E%3C%2Fsvg%3E");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px;
+  }
+  .not-found svg {
+    width: 96px;
+    height: 96px;
+    color: #8A8480;
+    margin-bottom: 28px;
+  }
+  .not-found .code {
+    font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+    font-weight: 400;
+    color: #8A8480;
+    font-size: clamp(3.2rem, 8vw, 5rem);
+    letter-spacing: 0.02em;
+    line-height: 0.9;
+  }
+  .not-found .message {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 300;
+    color: #8A8480;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    margin-top: 14px;
+  }
+</style>
+</head>
+<body>
+  <div class="not-found">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <circle cx="8.5" cy="10" r="1" fill="currentColor" stroke="none"></circle>
+      <circle cx="15.5" cy="10" r="1" fill="currentColor" stroke="none"></circle>
+      <path d="M8.5 16c0.9 -1.6 2.2 -2.4 3.5 -2.4s2.6 0.8 3.5 2.4"></path>
+    </svg>
+    <div class="code">404</div>
+    <div class="message">Page not found</div>
+  </div>
+</body>
+</html>
