@@ -61,7 +61,7 @@ if (heroParallax && heroImageWrap) {
     const rect = heroImageWrap.getBoundingClientRect();
     if (rect.bottom < 0 || rect.top > window.innerHeight) return;
     const progress = -rect.top / (rect.height + window.innerHeight);
-    heroParallax.style.transform = `translateY(${progress * 120}px)`;
+    heroParallax.style.transform = `translateY(${progress * 190}px)`;
   }, { passive: true });
 }
 
