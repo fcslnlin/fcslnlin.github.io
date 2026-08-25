@@ -1247,6 +1247,13 @@ ul { list-style: none; }
   transition: color 0.2s;
 }
 .defiant-track-name { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.4; }
+.defiant-credit {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  margin-top: 14px;
+  text-align: right;
+}
 
 /* ============ BACKGROUND PATTERN ============ */
 body {
