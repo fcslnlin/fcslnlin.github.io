@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Photography | Francis Lin</title>
+  <meta name="description" content="Event photography and video by Francis Lin." />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="events.css" />
+</head>
+<body class="ev-page">
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">FL</a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="events.html" class="is-current">Events</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#work" class="mobile-link">Work</a>
+    <a href="events.html" class="mobile-link">Events</a>
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- FULL-FRAME LOOPING VIDEO (no sound) -->
+  <header class="ev-video-hero" id="evHero">
+    <video class="ev-video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/events-video.mp4" type="video/mp4" />
+      <source src="assets/events-video.mov" type="video/quicktime" />
+    </video>
+    <div class="ev-video-shade"></div>
+    <div class="ev-video-text">
+      <p class="ev-eyebrow">Event Photography</p>
+      <h1 class="ev-title">FRANCIS LIN</h1>
+    </div>
+    <a href="#panel" class="ev-scroll-cue" aria-label="Scroll to photos">SCROLL <span>↓</span></a>
+  </header>
+
+  <!-- WHITE PANEL SLIDES UP OVER THE VIDEO -->
+  <div class="ev-panel" id="panel">
+    <section class="ev-slideshow-section">
+      <div class="ev-slideshow-head">
+        <span class="label">Selected Frames</span>
+        <h2>FROM THE FLOOR</h2>
+      </div>
+
+      <div class="ev-slideshow" id="evSlideshow" aria-roledescription="carousel">
+        <div class="ev-track" id="evTrack">
+          <figure class="ev-slide"><img src="assets/events-1.jpg" alt="Event photo 1" /></figure>
+          <figure class="ev-slide"><img src="assets/events-2.jpg" alt="Event photo 2" /></figure>
+          <figure class="ev-slide"><img src="assets/events-3.jpg" alt="Event photo 3" /></figure>
+          <figure class="ev-slide"><img src="assets/events-4.jpg" alt="Event photo 4" /></figure>
+          <figure class="ev-slide"><img src="assets/events-5.jpg" alt="Event photo 5" /></figure>
+          <figure class="ev-slide"><img src="assets/events-6.jpg" alt="Event photo 6" /></figure>
+          <figure class="ev-slide"><img src="assets/events-7.jpg" alt="Event photo 7" /></figure>
+          <figure class="ev-slide"><img src="assets/events-8.jpg" alt="Event photo 8" /></figure>
+        </div>
+        <button class="ev-arrow ev-prev" id="evPrev" aria-label="Previous photo">‹</button>
+        <button class="ev-arrow ev-next" id="evNext" aria-label="Next photo">›</button>
+        <div class="ev-bar"><span id="evCount">1 / 8</span><div class="ev-dots" id="evDots"></div></div>
+      </div>
+      <p class="ev-empty" id="evEmpty" hidden>Photos coming soon.</p>
+    </section>
+
+    <section id="contact" class="contact-section ev-contact">
+      <div class="contact-inner">
+        <span class="label">Book a Shoot</span>
+        <h2 class="contact-heading">COVERING<br>YOUR EVENT?</h2>
+        <p class="contact-desc">Tell me the date, the venue, and what you need delivered.</p>
+        <a href="mailto:francislin.co@outlook.com?subject=Event%20photography" class="contact-email">francislin.co@outlook.com</a>
+        <div class="contact-socials"><a href="index.html">Full Portfolio ↗</a></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 Francis Lin</span>
+      <span>Los Angeles, CA</span>
+    </footer>
+  </div>
+
+  <script src="events.js"></script>
+</body>
+</html>

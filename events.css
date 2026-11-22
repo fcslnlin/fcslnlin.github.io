@@ -1,0 +1,62 @@
+/* Events page. Extends style.css. */
+body.ev-page { background: #fff; }
+
+/* nav sits over the dark video until you scroll */
+.ev-page #nav:not(.scrolled) .nav-logo,
+.ev-page #nav:not(.scrolled) .nav-links a { color: #fff; }
+.ev-page #nav:not(.scrolled) .nav-toggle span { background: #fff; }
+.nav-links a.is-current::after { width: 100%; }
+
+/* ---------- VIDEO HERO (fixed behind, panel slides over it) ---------- */
+.ev-video-hero {
+  position: fixed; inset: 0; height: 100vh; height: 100svh;
+  background: #111; overflow: hidden; z-index: 0;
+}
+.ev-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ev-video-shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.1) 55%); }
+.ev-video-text { position: absolute; left: var(--pad); right: var(--pad); bottom: 12vh; color: #fff; }
+.ev-eyebrow { font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+.ev-title { font-family: var(--font-display); font-size: clamp(4rem, 14vw, 11rem); line-height: .9; letter-spacing: .02em; }
+.ev-video-text { animation: evUp 1s .2s both; }
+.ev-scroll-cue { position: absolute; right: var(--pad); bottom: 40px; color: #fff; font-size: .7rem; letter-spacing: .22em; text-decoration: none; opacity: .85; animation: evBob 2s ease-in-out infinite; }
+@keyframes evUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+@keyframes evBob { 50% { transform: translateY(6px); } }
+
+/* ---------- WHITE PANEL ---------- */
+.ev-panel {
+  position: relative; z-index: 1;
+  margin-top: 100vh; margin-top: 100svh;
+  background: #fff;
+  box-shadow: 0 -30px 60px rgba(0,0,0,.25);
+}
+.js .ev-slideshow-section { opacity: 0; transform: translateY(60px); transition: opacity .9s ease, transform .9s ease; }
+.js .ev-slideshow-section.visible { opacity: 1; transform: none; }
+
+.ev-slideshow-section { max-width: calc(var(--max-w) + var(--pad) * 2); margin: 0 auto; padding: 96px var(--pad) 96px; }
+.ev-slideshow-head { margin-bottom: 36px; }
+.ev-slideshow-head h2 { font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1; letter-spacing: .02em; }
+
+/* ---------- SLIDESHOW (moves left to right) ---------- */
+.ev-slideshow { position: relative; overflow: hidden; background: var(--cream-3); }
+.ev-track { display: flex; transition: transform .8s cubic-bezier(.65,0,.35,1); }
+.ev-slide { flex: 0 0 100%; margin: 0; aspect-ratio: 16 / 9; position: relative; }
+.ev-slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ev-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(250,248,245,.85); border: none; width: 48px; height: 48px; font-size: 1.8rem; line-height: 1; cursor: pointer; color: var(--ink); transition: background .2s, color .2s; }
+.ev-arrow:hover { background: var(--orange); color: #fff; }
+.ev-prev { left: 14px; } .ev-next { right: 14px; }
+.ev-bar { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: linear-gradient(to top, rgba(0,0,0,.45), transparent); color: #fff; font-size: .72rem; letter-spacing: .16em; }
+.ev-dots { display: flex; gap: 8px; }
+.ev-dots button { width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0; background: rgba(255,255,255,.5); cursor: pointer; }
+.ev-dots button.active { background: var(--orange); }
+.ev-empty { padding: 60px 0; text-align: center; font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-muted); }
+
+.ev-contact { background: #fff; }
+
+@media (max-width: 640px) {
+  .ev-arrow { width: 38px; height: 38px; font-size: 1.4rem; }
+  .ev-slideshow-section { padding: 64px var(--pad); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .ev-slideshow-section { opacity: 1; transform: none; transition: none; }
+  .ev-track { transition: none; } .ev-video-text, .ev-scroll-cue { animation: none; }
+}
